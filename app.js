@@ -61,7 +61,10 @@ var createNewTaskElement=function(taskString){
     return listItem;
 }
 
-
+const form = document.getElementById('add-item-form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+});
 
 var addTask=function(){
     console.log("Add Task...");

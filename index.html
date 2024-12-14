@@ -6,52 +6,60 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body class="body">
-    <div class="header">
+    <header class="header">
       <img class="header__img" src="./eisenhower-matrix.jpg">
-      <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-    </div>
-    <div class="main">
-      <p class="form-add" id="add-item-form">
-        <label class="form-add__label" for="new-task">Add Item</label>
-        <div class="form-add__input-wrapper">
-          <input id="new-task"class="form-add__input" type="text">
-          <button class="main__btn form-add__btn">Add</button>
-        </div>
-      </p>
-      <h3 class="main__title">Todo</h3>
-      <ul class="main__list" id="incomplete-list">
-        <li class="main__item">
-          <input class="main__checkbox" type="checkbox">
-          <label class="main__label">Pay Bills</label>
-          <input type="text" class="main__input">
-          <button class="main__btn main__btn--edit">Edit</button>
-          <button class="main__btn main__btn--del">
-            <img class="main__rm-icon" src="./remove.svg">
-          </button>
-        </li>
-        <li class="main__item main__item--editing">
-          <input class="main__checkbox" type="checkbox">
-          <label class="main__label">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="main__input">
-          <button class="main__btn main__btn--edit">Save</button>
-          <button class="main__btn main__btn--del">
-            <img class="main__rm-icon" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-      <h3 class="main__title">Completed</h3>
-      <ul class="main__list" id="completed-list">
-        <li class="main__item">
-          <input class="main__checkbox" type="checkbox" checked>
-          <label class="main__label">See the Doctor</label>
-          <input type="text" class="main__input">
-          <button class="main__btn main__btn--edit">Edit</button>
-          <button class="main__btn main__btn--del">
-            <img class="main__rm-icon" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-    </div>
+      <nav class="header__nav">
+        <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main__form-section">
+        <form class="form-add" id="add-item-form">
+          <label class="form-add__label" for="new-task">Add Item</label>
+          <div class="form-add__input-wrapper">
+            <input id="new-task"class="form-add__input" type="text">
+            <button class="main__btn form-add__btn">Add</button>
+          </div>
+        </form>
+      </div>
+      <section class="main__section">
+        <h1 class="main__title">Todo</h1>
+        <ul class="main__list" id="incomplete-list">
+          <li class="main__item">
+            <input class="main__checkbox" type="checkbox">
+            <label class="main__label" for="bills-input">Pay Bills</label>
+            <input type="text" class="main__input" id="bills-input">
+            <button class="main__btn main__btn--edit">Edit</button>
+            <button class="main__btn main__btn--del">
+              <img class="main__rm-icon" src="./remove.svg">
+            </button>
+          </li>
+          <li class="main__item main__item--editing">
+            <input class="main__checkbox" type="checkbox">
+            <label class="main__label" for="shopping-input">Go Shopping</label>
+            <input type="text" value="Go Shopping" class="main__input" id="shopping-input">
+            <button class="main__btn main__btn--edit">Save</button>
+            <button class="main__btn main__btn--del">
+              <img class="main__rm-icon" src="./remove.svg">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="main__section">
+        <h2 class="main__title">Completed</h2>
+        <ul class="main__list" id="completed-list">
+          <li class="main__item">
+            <input class="main__checkbox" type="checkbox" checked>
+            <label class="main__label" for="completed-input">See the Doctor</label>
+            <input type="text" class="main__input" id="completed-input">
+            <button class="main__btn main__btn--edit">Edit</button>
+            <button class="main__btn main__btn--del">
+              <img class="main__rm-icon" src="./remove.svg">
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
